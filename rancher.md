@@ -140,3 +140,4 @@ sed -E 's/ZD-([1-9]+)/https\:\/\/rancher\.zendesk.com\/agent\/tickets\/\1/'
 
 https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/#without-kubectl-proxy
 
+docker run -p 8080:80 -p 8443:443 --name echo -d mendhak/http-https-echo
