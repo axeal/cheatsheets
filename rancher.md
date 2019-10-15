@@ -1,4 +1,12 @@
-curl https://releases.rancher.com/install-docker/17.03.sh | bash
+**Install Docker**: `curl https://releases.rancher.com/install-docker/19.03.sh | bash`
+
+**Rancher 2.x Log Collection**: `wget -O- https://raw.githubusercontent.com/rancher/logs-collector/master/rancher_logs_collector.sh | sudo bash -s`
+
+**Rancher 1.6 Log Collection**: `wget -O- https://raw.githubusercontent.com/rancher/logs-collector/release/v1.6/rancher16_logs_collector.sh | sudo bash -s`
+
+**RancherOS Log Collection**: `sudo curl https://raw.githubusercontent.com/rancher/os/master/scripts/tools/collect_rancheros_info.sh | sh`
+
+**Extended Cleanup script**: https://gist.github.com/superseb/06539c6dcd377e118d72bfefdd444f81
 
 apt install -y libltdl7  
 
@@ -42,11 +50,6 @@ for certificate in $(ls -1 kube-apiserver.pem kube-controller-manager.pem kube-e
 
 for ctid in $(docker ps -q --filter name=k8s_POD); do echo "$ctid"; docker inspect --format '{{ .Name }}' $ctid; nsenter --net=$(docker inspect --format '{{ .NetworkSettings.SandboxKey }}' $ctid) ifconfig eth0 | grep 'inet addr'; done
 
-
-
-https://github.com/rancher/os/blob/master/scripts/tools/collect_rancheros_info.sh
-
-Cleanup script https://gist.github.com/superseb/06539c6dcd377e118d72bfefdd444f81
 
 Custom cluster kubeconfig
 
