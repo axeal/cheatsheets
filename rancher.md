@@ -8,6 +8,12 @@
 
 **Extended Cleanup script**: https://gist.github.com/superseb/06539c6dcd377e118d72bfefdd444f81
 
+**Install specific Docker version on Ubuntu**:
+```
+apt-cache show docker-ce | grep Version
+apt install docker-ce=<version string> docker-ce-cli=<version string>
+```
+
 apt install -y libltdl7  
 
 wget https://download.docker.com/linux/ubuntu/dists/xenial/pool/stable/amd64/docker-ce_17.03.2~ce-0~ubuntu-xenial_amd64.deb  
