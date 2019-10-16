@@ -14,6 +14,26 @@ apt-cache show docker-ce | grep Version
 apt install docker-ce=<version string> docker-ce-cli=<version string>
 ```
 
+**Run http-echo container**: `docker run -p 8080:80 -p 8443:443 --name echo -d mendhak/http-https-echo`
+
+**Connect over TLS to a server**: `openssl s_client -connect <ip-address>:6443`
+
+**Connect to kubeapi with the right certificates**: `curl --cert <client-cert-path> --key <client-key-path> --cacert <ca-cert-path> https://<ip-address>:6443`
+
+**Inspect certificate**: `openssl x509 -in <cert-path> -noout -text`
+
+**Check certificate expiration**: `openssl x509 -startdate -enddate -noout -in <cert-path>`
+
+**Verify that the certificate is signed by a specific CA**: `openssl verify -verbose -CAfile <ca-cert-path> <cert-path>`
+
+**Verify that the certificate is signed by CA and intermediate**: `openssl verify -CAfile <ca-cert-path> -untrusted <intermediate-cert-path> <cert-path>`
+
+**Verify that the cert matches its key**:
+```
+openssl x509 -noout -modulus -in <cert-path> | openssl md5
+openssl rsa -noout -modulus -in <key-path> | openssl md5
+```
+
 apt install -y libltdl7  
 
 wget https://download.docker.com/linux/ubuntu/dists/xenial/pool/stable/amd64/docker-ce_17.03.2~ce-0~ubuntu-xenial_amd64.deb  
@@ -21,8 +41,6 @@ wget https://download.docker.com/linux/ubuntu/dists/xenial/pool/stable/amd64/doc
 dpkg -i docker-ce_17.03.2~ce-0~ubuntu-xenial_amd64.deb
 
 usermod -aG docker $USER
-
-openssl x509 -in certificate.crt -text -noout
 
 openssl req -newkey rsa:4096 -nodes -sha256 -keyout certs/domain.key -x509 -days 365 -out certs/domain.crt
 
@@ -149,4 +167,4 @@ sed -E 's/ZD-([1-9]+)/https\:\/\/rancher\.zendesk.com\/agent\/tickets\/\1/'
 
 https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/#without-kubectl-proxy
 
-docker run -p 8080:80 -p 8443:443 --name echo -d mendhak/http-https-echo
+
