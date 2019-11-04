@@ -24,6 +24,8 @@ apt install docker-ce=<version string> docker-ce-cli=<version string>
 
 **Check certificate expiration**: `openssl x509 -startdate -enddate -noout -in <cert-path>`
 
+**Check certificate expriation for cluster certs**: ```for cert in `ls -d /etc/kubernetes/ssl/* | grep -v key | grep pem`; do echo $cert; openssl x509 -startdate -enddate -noout -in $cert; done```
+
 **Verify that the certificate is signed by a specific CA**: `openssl verify -verbose -CAfile <ca-cert-path> <cert-path>`
 
 **Verify that the certificate is signed by CA and intermediate**: `openssl verify -CAfile <ca-cert-path> -untrusted <intermediate-cert-path> <cert-path>`
