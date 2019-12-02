@@ -16,6 +16,8 @@ apt install docker-ce=<version string> docker-ce-cli=<version string>
 
 **Run http-echo container**: `docker run -p 8080:80 -p 8443:443 --name echo -d mendhak/http-https-echo`
 
+**Check remote certificate**: openssl s_client -showcerts -connect rancher.alexseymour.com:443 -servername rancher.alexseymour.com
+
 **Connect over TLS to a server**: `openssl s_client -connect <ip-address>:6443`
 
 **Connect to kubeapi with the right certificates**: `curl --cert <client-cert-path> --key <client-key-path> --cacert <ca-cert-path> https://<ip-address>:6443`
