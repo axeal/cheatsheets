@@ -18,6 +18,8 @@ apt install docker-ce=<version string> docker-ce-cli=<version string>
 
 **Run basic HTTP forward proxy**: `docker run -d --name='tinyproxy' -p 80:8888 dannydirect/tinyproxy:latest ANY`
 
+**Get etcd metrics**: `curl --cacert /etc/kubernetes/ssl/kube-ca.pem --key /etc/kubernetes/ssl/kube-etcd-104-248-25-11-key.pem --cert /etc/kubernetes/ssl/kube-etcd-104-248-25-11.pem https://127.0.0.1:2379/metrics`
+
 **Check remote certificate**: openssl s_client -showcerts -connect rancher.alexseymour.com:443 -servername rancher.alexseymour.com
 
 **Connect over TLS to a server**: `openssl s_client -connect <ip-address>:6443`
