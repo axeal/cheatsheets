@@ -6,7 +6,9 @@
 
 **RancherOS Log Collection**: `sudo curl https://raw.githubusercontent.com/rancher/os/master/scripts/tools/collect_rancheros_info.sh | sh`
 
-**Extended Cleanup script**: https://gist.github.com/superseb/06539c6dcd377e118d72bfefdd444f81
+**Extended Cleanup script (DESTRUCTIVE)**: `wget -O- https://gist.githubusercontent.com/superseb/06539c6dcd377e118d72bfefdd444f81/raw/7d7fc0b28240c396c7cad0c25fd29bc1b5f53aa8/extended-cleanup-rancher2.sh | bash`
+
+**Extended Cleanup script URL**: https://gist.github.com/superseb/06539c6dcd377e118d72bfefdd444f81
 
 **Install specific Docker version on Ubuntu**:
 ```
