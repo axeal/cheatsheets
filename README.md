@@ -8,7 +8,7 @@
 
 **Rancher 2.x Usage Collection**: `wget -O- https://raw.githubusercontent.com/rancherlabs/support-tools/master/collection/rancher/v2.x/usage-collector/rancher2_usage_collector.sh | sudo bash -s`
 
-**Extended Cleanup script (DESTRUCTIVE)**: `wget -O- https://gist.githubusercontent.com/superseb/06539c6dcd377e118d72bfefdd444f81/raw/7d7fc0b28240c396c7cad0c25fd29bc1b5f53aa8/extended-cleanup-rancher2.sh | bash`
+**Extended Cleanup script (DESTRUCTIVE)**: `wget -O- https://gist.githubusercontent.com/superseb/06539c6dcd377e118d72bfefdd444f81/raw/7d7fc0b28240c396c7cad0c25fd29bc1b5f53aa8/extended-cleanup-rancher2.sh | sudo bash -s`
 
 **Extended Cleanup script URL**: https://gist.github.com/superseb/06539c6dcd377e118d72bfefdd444f81
 
