@@ -1,10 +1,12 @@
 **Install Docker**: `curl https://releases.rancher.com/install-docker/19.03.sh | bash`
 
-**Rancher 2.x Log Collection**: `wget -O- https://raw.githubusercontent.com/rancher/logs-collector/master/rancher_logs_collector.sh | sudo bash -s`
+**Rancher 2.x Log Collection**: `wget -O- https://raw.githubusercontent.com/rancherlabs/support-tools/master/collection/rancher/v2.x/logs-collector/rancher2_logs_collector.sh | sudo bash -s`
 
-**Rancher 1.6 Log Collection**: `wget -O- https://raw.githubusercontent.com/rancher/logs-collector/release/v1.6/rancher16_logs_collector.sh | sudo bash -s`
+**Rancher 1.6 Log Collection**: `wget -O- https://raw.githubusercontent.com/rancherlabs/support-tools/master/collection/rancher/v1.6/logs-collector/rancher16_logs_collector.sh | sudo bash -s`
 
 **RancherOS Log Collection**: `sudo curl https://raw.githubusercontent.com/rancher/os/master/scripts/tools/collect_rancheros_info.sh | sh`
+
+**Rancher 2.x Usage Collection**: `wget -O- https://raw.githubusercontent.com/rancherlabs/support-tools/master/collection/rancher/v2.x/usage-collector/rancher2_usage_collector.sh | sudo bash -s`
 
 **Extended Cleanup script (DESTRUCTIVE)**: `wget -O- https://gist.githubusercontent.com/superseb/06539c6dcd377e118d72bfefdd444f81/raw/7d7fc0b28240c396c7cad0c25fd29bc1b5f53aa8/extended-cleanup-rancher2.sh | bash`
 
