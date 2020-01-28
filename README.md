@@ -20,6 +20,8 @@ apt install docker-ce=<version string> docker-ce-cli=<version string>
 
 **View /etc/resolv.conf of coredns container***: ```docker cp `docker ps | grep k8s_coredns | head -n1 | awk '{print $1}'`:/etc/resolv.conf -```
 
+***View /etc/coredns of coredns container***: ```docker cp `docker ps | grep k8s_coredns | awk '{print $1}' | head -n1`:/etc/coredns -```
+
 **Run http-echo container**: `docker run -p 8080:80 -p 8443:443 --name echo -d mendhak/http-https-echo`
 
 **Run basic HTTP forward proxy**: `docker run -d --name='tinyproxy' -p 80:8888 dannydirect/tinyproxy:latest ANY`
