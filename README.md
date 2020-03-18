@@ -12,6 +12,8 @@
 
 **Extended Cleanup script URL**: https://gist.github.com/superseb/06539c6dcd377e118d72bfefdd444f81
 
+**RBAC Lookup Tool**: https://github.com/FairwindsOps/rbac-lookup
+
 **Install specific Docker version on Ubuntu**:
 ```
 apt-cache show docker-ce | grep Version
