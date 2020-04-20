@@ -14,6 +14,8 @@
 
 **RBAC Lookup Tool**: https://github.com/FairwindsOps/rbac-lookup
 
+**Get rancher-wins service logs**: `Get-EventLog -LogName Application -Source rancher-wins > wins.log`
+
 **Install specific Docker version on Ubuntu**:
 ```
 apt-cache show docker-ce | grep Version
