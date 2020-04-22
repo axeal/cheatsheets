@@ -16,6 +16,8 @@
 
 **Get rancher-wins service logs**: `Get-EventLog -LogName Application -Source rancher-wins > wins.log`
 
+**Get a secret contents (escape periods in the key)**: `kubectl get secret <SECRET_NAME> -o jsonpath="{.data.<DATA>}" | base64 --decode`    
+
 **Install specific Docker version on Ubuntu**:
 ```
 apt-cache show docker-ce | grep Version
