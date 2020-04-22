@@ -1,6 +1,7 @@
 **Install Docker**: `curl https://releases.rancher.com/install-docker/19.03.sh | bash`
 
 **Rancher 2.x Log Collection**: `wget -O- https://raw.githubusercontent.com/rancherlabs/support-tools/master/collection/rancher/v2.x/logs-collector/rancher2_logs_collector.sh | sudo bash -s`
+https://support.rancher.com/hc/en-us/articles/360039113911-The-Rancher-v2-x-log-collector-script
 
 **Rancher 1.6 Log Collection**: `wget -O- https://raw.githubusercontent.com/rancherlabs/support-tools/master/collection/rancher/v1.6/logs-collector/rancher16_logs_collector.sh | sudo bash -s`
 
