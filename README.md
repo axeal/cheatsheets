@@ -9,9 +9,9 @@ https://support.rancher.com/hc/en-us/articles/360039113911-The-Rancher-v2-x-log-
 
 **Rancher 2.x Usage Collection**: `wget -O- https://raw.githubusercontent.com/rancherlabs/support-tools/master/collection/rancher/v2.x/usage-collector/rancher2_usage_collector.sh | sudo bash -s`
 
-**Extended Cleanup script (DESTRUCTIVE)**: `wget -O- https://gist.githubusercontent.com/superseb/06539c6dcd377e118d72bfefdd444f81/raw/7d7fc0b28240c396c7cad0c25fd29bc1b5f53aa8/extended-cleanup-rancher2.sh | sudo bash -s`
+**Extended Cleanup script (DESTRUCTIVE)**: `wget -O- https://github.com/rancherlabs/support-tools/raw/master/extended-rancher-2-cleanup/extended-cleanup-rancher2.sh | sudo bash -s`
 
-**Extended Cleanup script URL**: https://gist.github.com/superseb/06539c6dcd377e118d72bfefdd444f81
+**Extended Cleanup script URL**: https://github.com/rancherlabs/support-tools/tree/master/extended-rancher-2-cleanup
 
 **RBAC Lookup Tool**: https://github.com/FairwindsOps/rbac-lookup
 
