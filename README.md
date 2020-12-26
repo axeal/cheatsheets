@@ -81,3 +81,5 @@ docker run --rm --net=host -v $(docker inspect kubelet --format '{{ range .Mount
 **Remove Windows carriage return characters in vim**: `:%s/\r//g`
 
 **Runnning a proxy with SSL interception**: https://scubarda.com/2020/03/23/configure-squid-proxy-for-ssl-tls-inspection-https-interception/
+
+**Add my SSH keys to a host**: wget -O- https://github.com/axeal.keys >> ~/.ssh/authorized_keys
