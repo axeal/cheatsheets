@@ -83,3 +83,5 @@ docker run --rm --net=host -v $(docker inspect kubelet --format '{{ range .Mount
 **Runnning a proxy with SSL interception**: https://scubarda.com/2020/03/23/configure-squid-proxy-for-ssl-tls-inspection-https-interception/
 
 **Add my SSH keys to a host**: `wget -O- https://github.com/axeal.keys >> ~/.ssh/authorized_keys`
+
+**Create Namespaces from YAML spec list**: `grep namespace: <spec>.yaml | awk '{print $2}' | sort | uniq | xargs -I '{}' kubectl create ns '{}'`
