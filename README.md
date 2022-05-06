@@ -82,6 +82,16 @@ docker run --rm --net=host -v $(docker inspect kubelet --format '{{ range .Mount
 
 **Remove Windows carriage return characters in vim**: `:%s/\r//g`
 
+**Curl kube-apiserver on RKE1 controlplane node**:
+```
+docker cp kubelet:/usr/local/bin/kubectl .
+wget https://gist.githubusercontent.com/Oats87/9b27310f5d2937adc87a03ee97675802/raw/eca91c84e48aa0fb52248c661fdf1646d657196e/generate_new_kubeconfig.sh
+sudo bash generate_new_kubeconfig.sh
+export KUBECONFIG=new_kube_config.yml
+TOKEN=$(./kubectl -n cattle-system get secret `kubectl -n cattle-system get sa cattle -o jsonpath={.secrets[0].name}` -o jsonpath={.data.token} | base64 -d)
+curl -v -k -H "Authorization: Bearer $TOKEN" https://127.0.0.1:6443/api/v1/namespaces
+```
+
 **Runnning a proxy with SSL interception**: https://scubarda.com/2020/03/23/configure-squid-proxy-for-ssl-tls-inspection-https-interception/
 
 **Add my SSH keys to a host**: `wget -O- https://github.com/axeal.keys >> ~/.ssh/authorized_keys`
