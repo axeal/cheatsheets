@@ -97,3 +97,5 @@ curl -v -k -H "Authorization: Bearer $TOKEN" https://127.0.0.1:6443/api/v1/names
 **Add my SSH keys to a host**: `wget -O- https://github.com/axeal.keys >> ~/.ssh/authorized_keys`
 
 **Create Namespaces from YAML spec list**: `grep namespace: <spec>.yaml | awk '{print $2}' | sort | uniq | xargs -I '{}' kubectl create ns '{}'`
+
+**Run docker registry pull-through cache**: `docker run -d -p 5000:5000 -e REGISTRY_PROXY_REMOTEURL=https://registry-1.docker.io --restart=always --name registry registry:2`
