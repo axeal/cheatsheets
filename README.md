@@ -99,3 +99,5 @@ curl -v -k -H "Authorization: Bearer $TOKEN" https://127.0.0.1:6443/api/v1/names
 **Create Namespaces from YAML spec list**: `grep namespace: <spec>.yaml | awk '{print $2}' | sort | uniq | xargs -I '{}' kubectl create ns '{}'`
 
 **Run docker registry pull-through cache**: `docker run -d -p 5000:5000 -e REGISTRY_PROXY_REMOTEURL=https://registry-1.docker.io --restart=always --name registry registry:2`
+
+**Re-compress an extracted rancher-backup-operator backup**: ```tar -C one-93342324-3ff1-4ce1-8fd4-cdd0446bac0e-2023-12-04T13-33-49Z -czvf one-93342324-3ff1-4ce1-8fd4-cdd0446bac0e-2023-12-04T13-33-49Z.tar.gz `ls one-93342324-3ff1-4ce1-8fd4-cdd0446bac0e-2023-12-04T13-33-49Z` ```
